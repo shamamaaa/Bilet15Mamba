@@ -1,5 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Employee
+<div class="card text-center" style="width: 18rem;">
+    <img class="card-img-top" src="~/assets/img/team/@Model.ImageUrl" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name @Model.Surname</h5>
+        <p class="card-text">Position: @Model.Position.Name</p>
+        <p class="card-text">Twitter: @Model.TwLink</p>
+        <p class="card-text">Facebook: @Model.FbLink</p>
+        <p class="card-text">Instagram: @Model.IgLink</p>
+        <p class="card-text">Linkedin: @Model.LinLink</p>
+
+        <a asp-action="index" asp-controller="employee" class="btn btn-primary">Go back</a>
+    </div>
+</div>

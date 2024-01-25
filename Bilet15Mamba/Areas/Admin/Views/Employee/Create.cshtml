@@ -1,5 +1,51 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model CreateEmployeeVm
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Create employee</h4>
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Photo">Photo</label>
+                <input asp-for="Photo" class="form-control" placeholder="Photo">
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname">Surname</label>
+                <input asp-for="Surname" class="form-control" placeholder="Surname">
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FbLink">Facebook Link</label>
+                <input asp-for="FbLink" class="form-control" placeholder="Facebook Link">
+                <span asp-validation-for="FbLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TwLink">Twitter Link</label>
+                <input asp-for="TwLink" class="form-control" placeholder="Twitter Link">
+                <span asp-validation-for="TwLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IgLink">Instagram Link</label>
+                <input asp-for="IgLink" class="form-control" placeholder="Instagram Link">
+                <span asp-validation-for="IgLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinLink">Linkedin Link</label>
+                <input asp-for="LinLink" class="form-control" placeholder="Linkedin Link">
+                <span asp-validation-for="LinLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PositionId">Position</label>
+                <select class="form-control" asp-for="PositionId" asp-items="Model.Positions">
+                </select>
+                <span asp-validation-for="PositionId" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary me-2">Submit</button>
+            <a class="btn btn-light" asp-action="index" asp-controller="employee">Cancel</a>
+        </form>
+    </div>
+</div>
