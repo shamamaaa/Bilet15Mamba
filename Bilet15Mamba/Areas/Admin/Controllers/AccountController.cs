@@ -3,7 +3,7 @@ using Bilet15Mamba.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bilet15Mamba.Areas.Admin.Controllers
+namespace Bilet15Mamba.Areas.Admin.Controllers    
 {
     [Area("Admin")]
     public class AccountController : Controller
@@ -22,6 +22,7 @@ namespace Bilet15Mamba.Areas.Admin.Controllers
 
         public IActionResult Login()
         {
+            //Salam muellimmmmmmm)))))))) Username=sabirguliyev Email=favtelebemshamama@gmail.com Password=Sabir12345;
             return View();
         }
 

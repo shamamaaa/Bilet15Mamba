@@ -1,0 +1,25 @@
+﻿@model Position
+
+<div class="card">
+    <div class="card-body">
+        <h2>@Model.Name</h2>
+        <p>Employee count: @Model.Employees.Count</p>
+        <br />
+        <a asp-action="index" asp-controller="position" class="btn btn-primary">Go back</a>
+    </div>
+</div>
+
+@foreach (var Model in Model.Employees)
+{
+    <div class="card text-center" style="width: 18rem;">
+        <img class="card-img-top" src="~/assets/img/team/@Model.ImageUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name @Model.Surname</h5>
+            <p class="card-text">Position: @Model.Position.Name</p>
+            <p class="card-text">Twitter: @Model.TwLink</p>
+            <p class="card-text">Facebook: @Model.FbLink</p>
+            <p class="card-text">Instagram: @Model.IgLink</p>
+            <p class="card-text">Linkedin: @Model.LinLink</p>
+        </div>
+    </div>
+}

@@ -16,6 +16,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
     x.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<LayoutService>();
+builder.Services.ConfigureApplicationCookie(x =>
+{
+    x.LoginPath = $"/admin/account/login";
+});
 var app = builder.Build();
 
 app.UseStaticFiles();
