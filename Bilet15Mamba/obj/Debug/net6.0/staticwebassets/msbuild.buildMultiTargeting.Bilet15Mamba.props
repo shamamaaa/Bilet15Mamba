@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bilet15Mamba.props" />
+</Project>
