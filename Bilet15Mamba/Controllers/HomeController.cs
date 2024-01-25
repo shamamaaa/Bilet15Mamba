@@ -1,14 +1,22 @@
-﻿using Bilet15Mamba.Models;
+﻿using Bilet15Mamba.DAL;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bilet15Mamba.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext _context;
+
+        public HomeController(AppDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var employees = await _context.Employees.Include(x=>x.Position).ToListAsync();
+            return View(employees);
         }
     }
 }

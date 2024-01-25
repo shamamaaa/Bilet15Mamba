@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0FqKXjc86Mc9TLsmclwBu4ST65NERt4OyN+rIx7sRUo=",
+  "Hash": "24PRE13/FciGTxCok6LAnwJLh/1mTH6JkUoFC8/uTSQ=",
   "Source": "Bilet15Mamba",
   "BasePath": "_content/Bilet15Mamba",
   "Mode": "Default",
@@ -1749,40 +1749,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
-    },
-    {
-      "Identity": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\forms\\contact.php",
-      "SourceId": "Bilet15Mamba",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\",
-      "BasePath": "_content/Bilet15Mamba",
-      "RelativePath": "forms/contact.php",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\forms\\contact.php"
-    },
-    {
-      "Identity": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\forms\\Readme.txt",
-      "SourceId": "Bilet15Mamba",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\",
-      "BasePath": "_content/Bilet15Mamba",
-      "RelativePath": "forms/Readme.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\forms\\Readme.txt"
     }
   ]
 }
