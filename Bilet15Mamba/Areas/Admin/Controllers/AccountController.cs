@@ -36,7 +36,7 @@ namespace Bilet15Mamba.Areas.Admin.Controllers
             if (user == null)
             {
                 user = await _userManager.FindByEmailAsync(loginVm.UserNameOrEmail);
-                if (user==null)
+                if (user == null)
                 {
                     ModelState.AddModelError(String.Empty, "Username, email or password is incorrect");
                     return View(loginVm);
@@ -56,7 +56,7 @@ namespace Bilet15Mamba.Areas.Admin.Controllers
 
             var role = (await _userManager.GetRolesAsync(user)).FirstOrDefault();
 
-            if (role=="Admin")
+            if (role == "Admin")
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -75,6 +75,42 @@ namespace Bilet15Mamba.Areas.Admin.Controllers
             {
                 return View(registerVm);
             }
+            AppUser user = new AppUser
+            {
+                Name = registerVm.Name,
+                Surname = registerVm.Surname,
+                UserName = registerVm.UserName,
+                Email = registerVm.Email
+            };
+
+            var result = await _userManager.CreateAsync(user, registerVm.Password);
+            if (!result.Succeeded)
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(String.Empty, item.Description);
+                }
+                return View(registerVm);
+            }
+
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home", new { area = "" });
+        }
+
+        public async Task<IActionResult> CreateRole()
+        {
+            await _roleManager.CreateAsync(new IdentityRole
+            {
+                Name = "Admin"
+            });
+            return RedirectToAction("Index", "Home", new { area = "" });
+        }
+
     }
 }
