@@ -9,6 +9,7 @@ namespace Bilet15Mamba.Areas.Admin.ViewModels
         [MaxLength(320, ErrorMessage = "Email must be maximum 320 characters.")]
         public string UserNameOrEmail { get; set; }
         [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         public bool IsRemembered { get; set; }
 

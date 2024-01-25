@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qII+hwLzNx/GmXI52pE/xTq0PCHae5u5zKtjpix9tMg=",
+  "Hash": "JCxkXm2BtYZTAUGi5TJbtwLXYtFugMFaf0KtBBVtaEM=",
   "Source": "Bilet15Mamba",
   "BasePath": "_content/Bilet15Mamba",
   "Mode": "Default",
@@ -1885,6 +1885,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\slide\\slide-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\assets\\img\\team\\0170e730-ddf6-47b1-8b66-1490642ca34d.jpg",
+      "SourceId": "Bilet15Mamba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\",
+      "BasePath": "_content/Bilet15Mamba",
+      "RelativePath": "assets/img/team/0170e730-ddf6-47b1-8b66-1490642ca34d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\0170e730-ddf6-47b1-8b66-1490642ca34d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\assets\\img\\team\\6905453f-6b55-4dc1-b6e9-fe4712de1bc2.jpg",
+      "SourceId": "Bilet15Mamba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\",
+      "BasePath": "_content/Bilet15Mamba",
+      "RelativePath": "assets/img/team/6905453f-6b55-4dc1-b6e9-fe4712de1bc2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\6905453f-6b55-4dc1-b6e9-fe4712de1bc2.jpg"
     },
     {
       "Identity": "C:\\Users\\ca.r215.04\\Desktop\\Bilet15Mamba\\Bilet15Mamba\\wwwroot\\assets\\img\\team\\team-1.jpg",

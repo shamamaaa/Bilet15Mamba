@@ -36,7 +36,7 @@ namespace Bilet15Mamba.Areas.Admin.Controllers
                 CurrentPage = page,
                 Items = employees
             };
-            return View(employees);
+            return View(paginationVm);
         }
 
         public async Task<IActionResult> Create()

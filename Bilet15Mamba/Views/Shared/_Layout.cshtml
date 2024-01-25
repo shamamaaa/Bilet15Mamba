@@ -46,14 +46,14 @@
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
-                <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+                @Html.Raw(setting["EmailIcon"])<a href="mailto:@setting["Email"]">@setting["Email"]</a>
+                @Html.Raw(setting["PhoneIcon"]) @setting["Phone"]
             </div>
             <div class="social-links d-none d-md-block">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="@setting["TwLink"]" class="twitter">@Html.Raw(setting["TwIcon"])</a>
+                <a href="@setting["FbLink"]" class="facebook">@Html.Raw(setting["FbIcon"])</a>
+                <a href="@setting["IgLink"]" class="instagram">@Html.Raw(setting["IgIcon"])</a>
+                <a href="@setting["LinLink"]" class="linkedin">@Html.Raw(setting["LinIcon"])</a>
             </div>
         </div>
     </section>
@@ -76,22 +76,20 @@
                     <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li class="dropdown">
-                        <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="#"><span>Account</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <li><a asp-action="index" asp-controller="home" asp-area="admin">Admin</a></li>
+                                }
+                                <li><a asp-action="logout" asp-controller="account" asp-area="admin">Logout</a></li>
+                            }
+                            else
+                            {
+                                <li><a asp-action="Login" asp-controller="account" asp-area="admin">Login</a></li>
+                            }
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -111,17 +109,16 @@
                     <div class="col-lg-3 col-md-6 footer-info">
                         <h3>Mamba</h3>
                         <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            @Html.Raw(setting["Adress"])
+                            <strong>Phone:</strong> @setting["Phone"]<br>
+                            <strong>Email:</strong> @setting["Email"]<br>
                         </p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="@setting["TwLink"]" class="twitter">@Html.Raw(setting["TwFooter"])</a>
+                            <a href="@setting["FbLink"]" class="facebook">@Html.Raw(setting["FbFooter"])</a>
+                            <a href="@setting["IgLink"]" class="instagram">@Html.Raw(setting["IgFooter"])</a>
+                            <a href="@setting["SkypeLink"]" class="google-plus">@Html.Raw(setting["SkypeFooter"])</a>
+                            <a href="@setting["LinLink"]" class="linkedin">@Html.Raw(setting["LinFooter"])</a>
                         </div>
                     </div>
 

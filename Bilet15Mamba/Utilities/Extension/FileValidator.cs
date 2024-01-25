@@ -30,7 +30,7 @@
                 await file.CopyToAsync(stream);
             }
 
-            return path;
+            return filename;
         }
 
         public static async void DeleteFile(this string filename, string root, params string[] folders)
