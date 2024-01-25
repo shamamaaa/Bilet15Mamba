@@ -1,4 +1,5 @@
 ﻿using Bilet15Mamba.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace Bilet15Mamba.Areas.Admin.ViewModels
@@ -26,5 +27,8 @@ namespace Bilet15Mamba.Areas.Admin.ViewModels
         public string? TwLink { get; set; }
         public string? LinLink { get; set; }
         public string? IgLink { get; set; }
+        //selectlist
+
+        public SelectList? Positions { get; set; }
     }
 }
